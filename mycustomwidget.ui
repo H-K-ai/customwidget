@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>myCustomWidget</class>
+ <widget class="QWidget" name="myCustomWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1174</width>
+    <height>612</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>myCustomWidget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 0, 0);
+background-color: rgb(0, 170, 127);</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="0" column="0">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="CircleWait" name="circleWait">
+              <property name="Color">
+               <color>
+                <red>255</red>
+                <green>85</green>
+                <blue>127</blue>
+               </color>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="TaiChiWait" name="taiChiWait">
+              <property name="FrontColor">
+               <color>
+                <red>170</red>
+                <green>0</green>
+                <blue>127</blue>
+               </color>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="DonutWait" name="donutWait">
+              <property name="FrontColor">
+               <color>
+                <red>0</red>
+                <green>170</green>
+                <blue>0</blue>
+               </color>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="LineWait" name="lineWait">
+              <property name="Color">
+               <color>
+                <red>85</red>
+                <green>0</green>
+                <blue>255</blue>
+               </color>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="RotateCircle" name="rotateCircle"/>
+            </item>
+            <item>
+             <widget class="ZoomCircleWait" name="zoomCircleWait">
+              <property name="Color">
+               <color>
+                <red>255</red>
+                <green>85</green>
+                <blue>255</blue>
+               </color>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="PieWait" name="pieWait">
+              <property name="FrontColor">
+               <color>
+                <red>255</red>
+                <green>85</green>
+                <blue>0</blue>
+               </color>
+              </property>
+              <property name="BackColor">
+               <color>
+                <red>0</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="RoundProgressBar" name="roundProgressBar"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <widget class="CurveChart" name="curveChart">
+          <property name="BackgroundEndColor">
+           <color>
+            <red>0</red>
+            <green>170</green>
+            <blue>127</blue>
+           </color>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CircleWait</class>
+   <extends>QWidget</extends>
+   <header>circlewait.h</header>
+  </customwidget>
+  <customwidget>
+   <class>DonutWait</class>
+   <extends>QWidget</extends>
+   <header>donutwait.h</header>
+  </customwidget>
+  <customwidget>
+   <class>LineWait</class>
+   <extends>QWidget</extends>
+   <header>linewait.h</header>
+  </customwidget>
+  <customwidget>
+   <class>PieWait</class>
+   <extends>QWidget</extends>
+   <header>piewait.h</header>
+  </customwidget>
+  <customwidget>
+   <class>RotateCircle</class>
+   <extends>QWidget</extends>
+   <header>rotatecircle.h</header>
+  </customwidget>
+  <customwidget>
+   <class>RoundProgressBar</class>
+   <extends>QWidget</extends>
+   <header>roundprogressbar.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>TaiChiWait</class>
+   <extends>QWidget</extends>
+   <header>taichiwait.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ZoomCircleWait</class>
+   <extends>QWidget</extends>
+   <header>zoomcirclewait.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CurveChart</class>
+   <extends>QWidget</extends>
+   <header>curvechart.h</header>
+   <container>1</container>
+   <slots>
+    <slot>setShowLine(bool)</slot>
+    <slot>setShowPoint(bool)</slot>
+    <slot>setShowPointBackground(bool)</slot>
+    <slot>clearData()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
